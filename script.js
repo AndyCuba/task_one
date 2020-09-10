@@ -55,3 +55,13 @@ let michael = sentence.substring(52,56);
 
 let newSentence = "На день рождения пришли: " + anton + ", " + dima + ", " + jenya + ", " + michael;
 console.log(newSentence);
+
+
+//Fifth
+
+
+// let word = prompt("Enter your word to find is it palindrome?","racecar");
+function isPalindrom(word) {
+    let newWord = word.split("").reverse().join("");
+    console.log(newWord)
+}
