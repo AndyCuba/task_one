@@ -1,3 +1,93 @@
+
+const container = document.getElementsByClassName('container')[0];
+container.firstElementChild.style.borderColor = 'red';
+container.children[4].style.borderColor = 'red';
+container.lastElementChild.style.borderColor = 'red';
+
+
+
+
+
+/*Покрасить внешние ссылки в красный цвет 
+<ul>
+ <li><a href="http://google.com">http://google.com</a></li>
+ <li><a href="/tutorial">/tutorial.html</a></li>
+ <li><a href="local/path">local/path</a></li>
+ <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+</ul>*/
+
+const list = document.getElementsByTagName('ul')[0];
+const links = list.children;
+
+for (i = 0; i < links.length; i++) {
+    const isContainsOuterLinks = links[i].firstElementChild.href.includes('http');
+    if (isContainsOuterLinks) {
+        links[i].style.backgroundColor = 'red';
+    }
+};
+
+
+
+
+
+/*Напишите функцию showNotification(options), которая создаёт
+уведомление: <div class="notification"> с заданным содержимым.
+Уведомление должно автоматически исчезнуть через 1,5 секунды.*/
+
+
+
+
+
+
+
+
+function showNotification(options){
+    let div = document.createElement('div');
+    div.className = 'notification';
+    div.innerHTML = options;
+    document.body.append(div);
+}
+
+setTimeout(showNotification, 3000, 'Hello!')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*написать функцию калькулятор, которая запрашивает у
 пользователя данные в таком порядке: число - действие -
 число - и в зависимости от действия - производит
@@ -34,24 +124,26 @@
 кэша, если значение имеется или записывать в него
 новые значения, если не имеется.*/
 
-let cash = {};
+// let cash = {};
 
-function storeData() {
+// function storeData() {
 
-    let obj = cash;
+//     let obj = cash;
 
-    return function (key, property){
+//     return function (key, property){
+            
+//         return obj[key] = property;
+//         }
+        
 
-        return obj[key] = property;
+//     }
 
-    }
-}
 
-const value = storeData();
-const firstValue = value('age', '25');
-const secondValue = value('name', 'John');
-const thirdValue = value( 'isAdmin', true);
-console.log(Object.keys(cash));
+// const value = storeData();
+// const firstValue = value('age', '25');
+// const secondValue = value('name', 'John');
+// const thirdValue = value( 'isAdmin', true);
+// console.log(Object.keys(cash));
 
 
 

@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <style>
+      .container {
+        display: grid;
+        grid-template-rows: 100px 100px 100px;
+        grid-template-columns: 10% 10% 10%;
+        gap: 1%;
+      }
+      .container div {
+        border: 5px solid black;
+        /* width: 200px;
+            height: 200px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <ul>
+      <li><a href="http://google.com">http://google.com</a></li>
+      <li><a href="/tutorial">/tutorial.html</a></li>
+      <li><a href="local/path">local/path</a></li>
+      <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+    </ul>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
-
-
-<!---->
