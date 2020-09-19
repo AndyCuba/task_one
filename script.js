@@ -1,8 +1,8 @@
 
-const container = document.getElementsByClassName('container')[0];
-container.firstElementChild.style.borderColor = 'red';
-container.children[4].style.borderColor = 'red';
-container.lastElementChild.style.borderColor = 'red';
+// const container = document.getElementsByClassName('container')[0];
+// container.firstElementChild.style.borderColor = 'red';
+// container.children[4].style.borderColor = 'red';
+// container.lastElementChild.style.borderColor = 'red';
 
 
 
@@ -16,15 +16,15 @@ container.lastElementChild.style.borderColor = 'red';
  <li><a href="http://nodejs.org">http://nodejs.org</a></li>
 </ul>*/
 
-const list = document.getElementsByTagName('ul')[0];
-const links = list.children;
+// const list = document.getElementsByTagName('ul')[0];
+// const links = list.children;
 
-for (i = 0; i < links.length; i++) {
-    const isContainsOuterLinks = links[i].firstElementChild.href.includes('http');
-    if (isContainsOuterLinks) {
-        links[i].style.backgroundColor = 'red';
-    }
-};
+// for (i = 0; i < links.length; i++) {
+//     const isContainsOuterLinks = links[i].firstElementChild.href.includes('http');
+//     if (isContainsOuterLinks) {
+//         links[i].style.backgroundColor = 'red';
+//     }
+// };
 
 
 
@@ -48,7 +48,14 @@ function showNotification(options){
     document.body.append(div);
 }
 
-setTimeout(showNotification, 3000, 'Hello!')
+
+
+showNotification('Hello There!')
+setTimeout(function (){
+    let del = document.getElementsByClassName('notification')[0];
+    del.remove();
+}
+, 3000)
 
 
 
