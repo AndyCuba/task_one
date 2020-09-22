@@ -8,8 +8,8 @@ let treasureY = 250;
 function handleClick(e) {
     let searchX = e.clientX;
     let searchY = e.clientY;
-    console.log(e.clientX);
-    console.log(e.clientY);
+    console.log(searchX);
+    console.log(searchY);
     if((treasureX - 30 <= searchX) && (treasureY - 30 <= searchY)){
         alert('Вы нашли КЛАД!!!');
     } else {
