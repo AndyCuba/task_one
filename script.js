@@ -2,8 +2,6 @@
 
 const container = document.body.getElementsByClassName('container')[0];
 
-let treasureX = 815;
-let treasureY = 250;
 
 function handleClick(e) {
     let searchX = e.clientX;
