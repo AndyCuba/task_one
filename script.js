@@ -1,4 +1,74 @@
 
+
+const container = document.body.getElementsByClassName('container')[0];
+
+let treasureX = 815;
+let treasureY = 250;
+
+function handleClick(e) {
+    let searchX = e.clientX;
+    let searchY = e.clientY;
+    console.log(e.clientX);
+    console.log(e.clientY);
+    if((treasureX - 30 <= searchX) && (treasureY - 30 <= searchY)){
+        alert('Вы нашли КЛАД!!!');
+    } else {
+        alert('Попробуйте еще!');
+    }
+}
+
+container.addEventListener('click', handleClick)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const container = document.getElementsByClassName('container')[0];
 // container.firstElementChild.style.borderColor = 'red';
 // container.children[4].style.borderColor = 'red';
@@ -41,37 +111,46 @@
 
 
 
-function showNotification(options){
-    let div = document.createElement('div');
-    div.className = 'notification';
-    div.innerHTML = options;
-    document.body.append(div);
-}
+// function showNotification(options){
+//     let div = document.createElement('div');
+//     div.className = 'notification';
+//     div.innerHTML = options;
+//     document.body.append(div);
+// }
 
 
 
-showNotification('Hello There!')
-setTimeout(function (){
-    let del = document.getElementsByClassName('notification')[0];
-    del.remove();
-}
-, 3000)
-
-
-
-
+// showNotification('Hello There!')
+// setTimeout(function (){
+//     let del = document.getElementsByClassName('notification')[0];
+//     del.remove();
+// }
+// , 3000)
 
 
 
 
 
+// var x =5
+// function foo(){
+//     var x = 7
+// }
+// foo()
+// console.log(x)
 
 
-
-
-
-
-
+// setTimeout(()=>{
+//     setTimeout(()=>{
+//         console.log(7);
+//     },0)
+//     console.log(13)
+// }, 0)
+// setTimeout(()=>{
+//     setTimeout(()=>{
+//         console.log(23);
+//     },0)
+//     console.log(31)
+// }, 0)
 
 
 
