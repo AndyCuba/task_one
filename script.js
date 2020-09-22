@@ -10,7 +10,7 @@ function handleClick(e) {
     let searchY = e.clientY;
     console.log(searchX);
     console.log(searchY);
-    if((treasureX - 30 <= searchX) && (treasureY - 30 <= searchY)){
+    if((searchX >= 810 && searchX <= 840 ) && (searchY >= 245 && searchY <= 270)){
         alert('Вы нашли КЛАД!!!');
     } else {
         alert('Попробуйте еще!');
