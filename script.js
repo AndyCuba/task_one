@@ -1,15 +1,46 @@
+Date.prototype.daysInMonth = function () {
+  return 32 - new Date(this.getFullYear(), this.getMonth(), 32).getDate();
+};
 
-function drawCalendar(year, month, html){
-    const date = new Date(year, month);
-    
-    html.innerHTML = date;
+function drawCalendar(year, month, htmlElement) {
+  const calendar = new Date(year, month);
 
-    console.log(date);
-    console.log(date.getDate.length)
+  for (i = 0; i < calendar.daysInMonth(); i++) {
+    let weekDays = new Date(year, month, i + 1);
+    console.log(weekDays);
+    console.log(assignWeekDays(weekDays));
 
+
+    htmlElement.innerHTML += `<div>${weekDays}, ${assignWeekDays(
+      weekDays
+    )}</div>`;
+  }
+  function assignWeekDays(date) {
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+
+    return days[date.getDay()];
+  }
+
+  // console.log(getWeekDay(calendar));
 }
 
-drawCalendar(2000, 2, calendar);
+drawCalendar(2020, 7, calendar);
+
+
+
+
+
+
+
+
 
 
 
@@ -47,7 +78,7 @@ drawCalendar(2000, 2, calendar);
 //         button.style.height = `${this.height}px`;
 //         button.innerHTML = this.label;
 //     }
-    
+
 //     init(button) {
 //         this.setProperties(button);
 //         button.addEventListener('click', this.handleClick);
@@ -91,6 +122,3 @@ drawCalendar(2000, 2, calendar);
 // const link = new Link(100, 30, 'Click', 'www.by');
 
 // link.render();
-
-
-
