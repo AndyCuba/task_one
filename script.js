@@ -5,15 +5,16 @@ Date.prototype.daysInMonth = function () {
 function drawCalendar(year, month, htmlElement) {
   const calendar = new Date(year, month);
 
-  for (i = 0; i < calendar.daysInMonth(); i++) {
+    for (i = 0; i < calendar.daysInMonth(); i++) {
     let weekDays = new Date(year, month, i + 1);
-    console.log(weekDays);
-    console.log(assignWeekDays(weekDays));
+    
+        if (assignWeekDays(weekDays) === "Monday")  {
+            htmlElement.innerHTML += `<tr><td>${weekDays}, ${assignWeekDays(weekDays)}</td></tr>`;
 
+    } else {htmlElement.innerHTML += `<td>${weekDays}, ${assignWeekDays(weekDays)}</td>`;}
 
-    htmlElement.innerHTML += `<div>${weekDays}, ${assignWeekDays(
-      weekDays
-    )}</div>`;
+    // console.log(weekDays);
+    // console.log(assignWeekDays(weekDays));
   }
   function assignWeekDays(date) {
     let days = [
@@ -29,7 +30,7 @@ function drawCalendar(year, month, htmlElement) {
     return days[date.getDay()];
   }
 
-  // console.log(getWeekDay(calendar));
+
 }
 
 drawCalendar(2020, 7, calendar);
